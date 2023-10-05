@@ -11,14 +11,25 @@ p {
 
 #sm-poster {
     width: 100%;
-    height: auto;
+    height: 70%;
 
+}
+
+#bg-poster {
+    width: 100%;
+    height: 100%;
+}
+
+#big-poster {
+    width: 100%;
+    height: 100%;
 }
 
 #main-row {
-
     margin-top: 3em;
 }
+
+
 
 #gold-star {
     color: #f5c518;
@@ -38,20 +49,64 @@ p {
     color: rgb(24, 103, 221);
 }
 
+.certification,
+.r-date {
+    font-size: small;
+}
+
+#f-col-poster,
+#s-col-poster,
+#t-col-poster {
+    padding: .12em;
+    height: 400px;
+}
+
+#fr-col-rating,
+#fv-col-rating {
+    padding: 0 .4em !important;
+}
+
+#t-col-poster .card {
+    background-color: rgb(53, 53, 53);
+}
+
+#t-col-poster .card:hover {
+    background-color: rgb(32, 32, 32) !important;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* rating styles for modal */
 .rating {
     position: relative;
     display: flex;
     flex-direction: row-reverse;
     gap: 4px;
-    padding: 30px 40px;
-    border: 3px solid #111;
-    border-radius: 30px;
+    padding: 0px 40px;
+    /* border: 3px solid #111;
+    border-radius: 30px; */
     background-color: #353535;
-    box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.5),
+    /* box-shadow: 30px 30px 30px -10px rgba(0, 0, 0, 0.5),
         inset 15px 15px 3px rgba(255, 255, 255, 0.1),
         -4px -4px 15px rgba(255, 255, 255, 0.1),
-        inset -2px -2px 12px rgba(0, 0, 0, 0.75);
+        inset -2px -2px 12px rgba(0, 0, 0, 0.75); */
 }
+
+.your-rate {
+    background-color: #353535;
+}
+
+.your-rate h4 {
+    margin-left: 1.7em;
+}
+
+
 
 .rating input {
     position: relative;
@@ -69,7 +124,7 @@ p {
     content: '\f005';
     position: absolute;
     font-family: fontAwesome;
-    font-size: 34px;
+    font-size: 20px;
     color: #111;
     transition: 0.5s;
 }
@@ -79,4 +134,37 @@ p {
 .rating input:checked~input::before,
 .rating input:checked::before {
     color: var(--c);
+}
+
+/* Review Box */
+.tag {
+    border: 1px solid #ff5a49;
+    border-radius: 5px;
+    color: #ff5a49;
+    cursor: pointer;
+    /* margin-bottom: 10px;
+    margin-left: 2.6em; */
+    padding: 10px;
+    width: 75%;
+}
+
+@media (max-width:991px) {
+    .your-rate h4 {
+        margin-left: 0em;
+    }
+}
+
+@media (max-width:767px) {
+    #rating-card {
+        height: 20% !important;
+    }
+
+    #t-col-poster {
+        height: 120px;
+        padding: 0% !important;
+    }
+
+    .your-rate h4 {
+        margin-left: 0em;
+    }
 }
